@@ -11,7 +11,8 @@ COPY package*.json ./
 # — if your code changes but package.json doesn't, Docker skips reinstalling packages.
 
 
-RUN npm ci --only=production
+RUN npm install --omit=dev
+
 # install only production packages (no nodemon, no test tools)
 
 

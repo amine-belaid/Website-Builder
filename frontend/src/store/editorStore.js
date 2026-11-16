@@ -45,6 +45,8 @@ const defaultProps = {
   text:   { content: 'Add your text here...' },
   image:  { url: '', alt: '' },
   navbar: { logo: 'My Site', links: ['Home', 'About', 'Contact'] },
+  features: { title: 'Why choose us', items: ['Lightning fast', 'Easy to use', 'Always available'] },
+  footer: { text: '© 2025 My Site. All rights reserved.' },
 };
 
 export default useEditorStore;

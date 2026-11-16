@@ -1,0 +1,118 @@
+/* ──────────────────────────────────────────────────────────────
+   Design tokens — dark is the default (matches the reference),
+   light is applied with <html data-theme="light">.
+   ────────────────────────────────────────────────────────────── */
+:root {
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --gutter: clamp(20px, 7vw, 104px);
+
+  /* brand */
+  --pink: #ff2d78;
+  --pink-soft: #ff5c9a;
+  --violet: #8b5cf6;
+  --violet-soft: #a78bfa;
+  --success: #34d399;
+  --warn: #fbbf24;
+  --danger: #f87171;
+
+  --grad-cta: linear-gradient(90deg, #ff2d78 0%, #c13ee8 55%, #8b4dff 100%);
+  --grad-text: linear-gradient(90deg, #8b5cf6 0%, #c44bd8 48%, #ff3d8b 100%);
+  --grad-logo: linear-gradient(135deg, #ff4d94 0%, #f0157a 100%);
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  color-scheme: dark;
+
+  /* surfaces */
+  --bg: #08050f;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-2: rgba(255, 255, 255, 0.075);
+  --surface-solid: #130d22;
+  --panel: rgba(16, 10, 30, 0.78);
+  --card-bg: rgba(22, 14, 40, 0.62);
+  --appbar-bg: rgba(8, 5, 15, 0.72);
+  --overlay: rgba(5, 3, 10, 0.72);
+
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(168, 130, 255, 0.4);
+
+  /* text */
+  --text: #ffffff;
+  --text-2: #c9c3dc;
+  --muted: #9a93b3;
+  --faint: #6e6788;
+  --link: #a78bfa;
+
+  /* fields */
+  --field-bg: rgba(255, 255, 255, 0.045);
+  --field-icon-bg: rgba(255, 255, 255, 0.035);
+  --focus: #b79bff;
+  --focus-ring: rgba(139, 92, 246, 0.2);
+
+  --card-glow:
+    0 0 0 1px rgba(168, 85, 247, 0.08),
+    0 40px 90px -30px rgba(124, 58, 237, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  /* mock-website colours used by editor block previews */
+  --mock-bg: #0d0818;
+  --mini-bg: #0d0818;
+
+  /* background */
+  --aurora-bg:
+    radial-gradient(55% 45% at 0% 100%, rgba(255, 60, 190, 0.42) 0%, rgba(168, 50, 230, 0.18) 45%, transparent 75%),
+    radial-gradient(45% 55% at 100% 62%, rgba(124, 58, 237, 0.38) 0%, transparent 72%),
+    radial-gradient(40% 35% at 100% 100%, rgba(139, 92, 246, 0.3) 0%, transparent 70%),
+    radial-gradient(60% 40% at 50% -12%, rgba(88, 28, 180, 0.24) 0%, transparent 70%),
+    linear-gradient(180deg, #0a0614 0%, #07040e 100%);
+  --orb: linear-gradient(135deg, #3a1d78 0%, #7c3aed 90%);
+  --orb-opacity: 0.9;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: #f6f2ff;
+  --surface: rgba(255, 255, 255, 0.62);
+  --surface-2: rgba(255, 255, 255, 0.92);
+  --surface-solid: #ffffff;
+  --panel: rgba(255, 255, 255, 0.8);
+  --card-bg: rgba(255, 255, 255, 0.72);
+  --appbar-bg: rgba(246, 242, 255, 0.78);
+  --overlay: rgba(30, 16, 60, 0.45);
+
+  --border: rgba(76, 29, 149, 0.13);
+  --border-strong: rgba(124, 58, 237, 0.45);
+
+  --text: #1a1033;
+  --text-2: #403762;
+  --muted: #6a6285;
+  --faint: #9a93b3;
+  --link: #6d28d9;
+
+  --field-bg: rgba(255, 255, 255, 0.85);
+  --field-icon-bg: rgba(124, 58, 237, 0.06);
+  --focus: #7c3aed;
+  --focus-ring: rgba(124, 58, 237, 0.16);
+
+  --card-glow:
+    0 0 0 1px rgba(124, 58, 237, 0.06),
+    0 40px 80px -30px rgba(124, 58, 237, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+  --mock-bg: #ffffff;
+  --mini-bg: #ffffff;
+
+  --aurora-bg:
+    radial-gradient(55% 45% at 0% 100%, rgba(255, 120, 200, 0.34) 0%, transparent 72%),
+    radial-gradient(45% 55% at 100% 60%, rgba(167, 139, 250, 0.36) 0%, transparent 72%),
+    radial-gradient(60% 40% at 50% -10%, rgba(196, 181, 253, 0.55) 0%, transparent 70%),
+    linear-gradient(180deg, #f8f5ff 0%, #efe9ff 100%);
+  --orb: linear-gradient(135deg, #c4b5fd 0%, #8b5cf6 90%);
+  --orb-opacity: 0.5;
+}

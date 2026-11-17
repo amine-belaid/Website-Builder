@@ -1,5 +1,16 @@
 const request = require('supertest');
 const app     = require('../../app');
+const { sequelize } = require('../config/database');
+require('../models');
+
+beforeAll(async () => {
+  // crée les tables manquantes (ne supprime rien)
+  await sequelize.sync();
+});
+
+afterAll(async () => {
+  await sequelize.close();
+});
 
 describe('Auth endpoints', () => {
 
@@ -23,4 +34,4 @@ describe('Auth endpoints', () => {
     expect(res.status).toBe(401);
   });
 
-}); 
+});
